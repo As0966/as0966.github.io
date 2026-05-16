@@ -6,7 +6,7 @@ Personal portfolio website showcasing my work as an **Electrical Engineer** and 
 
 ## 🔗 Live Site
 
-**[https://as0966.github.io/portfolio/](https://as0966.github.io/portfolio/)**
+**[https://as0966.github.io/](https://as0966.github.io/)**
 
 ## 🧑‍🔬 About Me
 
