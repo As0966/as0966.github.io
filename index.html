@@ -197,17 +197,87 @@
                 <div class="project-tags"><span>Fault-Tolerant</span><span>Nonlinear Control</span><span>Haptic</span><span>AUV</span></div>
             </div>
         </div>
-        <div class="project-card reveal">
+        <!-- PUBLICATION CARD — Haptic Manipulator -->
+        <div class="project-card project-card--publication reveal">
             <div class="project-header">
-                <span class="project-type completed"><i class="fas fa-check-circle"></i> Completed</span>
-                <h3>Adaptive Parameter Identification & Robust Path Tracking in a 3-DOF Haptic Manipulator</h3>
+                <span class="project-type accepted"><i class="fas fa-newspaper"></i> Accepted for Publication</span>
+                <h3>Adaptive Parameter Identification &amp; Robust Path Tracking in a 3-DOF Haptic Manipulator</h3>
+                <p class="pub-subtitle">A Comparative Analysis of PID, SMC, and DCAL Controllers Under Harmonic Perturbations</p>
             </div>
-            <div class="project-body">
-                <p>Adaptive parameter identification and robust path tracking control for a three-degree-of-freedom haptic manipulator with experimental validation.</p>
-                <div class="project-tags"><span>Adaptive Control</span><span>Parameter ID</span><span>Haptic</span><span>MATLAB</span></div>
+
+            <!-- Robot image + abstract side by side -->
+            <div class="pub-hero">
+                <div class="pub-device-img">
+                    <img src="assets/images/haptic/image2.jpeg" alt="3-DOF Touch Haptic Manipulator used in experiments" loading="lazy">
+                    <div class="pub-img-caption">Touch Haptic Device — İzmir Katip Çelebi University Lab</div>
+                </div>
+                <div class="pub-abstract">
+                    <div class="pub-label"><i class="fas fa-quote-left"></i> Abstract</div>
+                    <p>A <strong>Desired Compensation Adaptive Law (DCAL)</strong>-based controller is developed for trajectory tracking of a 3-DOF haptic manipulator under 2 Hz harmonic disturbances. The proposed framework introduces <strong>real-time adaptive parameter identification</strong>, enabling dynamic compensation of configuration-dependent inertia and external perturbations — outperforming conventional PID and Sliding Mode Control architectures.</p>
+                    <div class="pub-meta-row">
+                        <span><i class="fas fa-users"></i> B. L. Janka, K. ÇETİN</span>
+                        <span><i class="fas fa-university"></i> İzmir Katip Çelebi University</span>
+                        <span><i class="fas fa-calendar-check"></i> 2025</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Key results metrics -->
+            <div class="pub-metrics">
+                <div class="pub-metric dcal-best">
+                    <div class="metric-controller">DCAL <i class="fas fa-star"></i></div>
+                    <div class="metric-value">0.0044 <span>rad</span></div>
+                    <div class="metric-label">Total RMSE</div>
+                </div>
+                <div class="pub-metric dcal-best">
+                    <div class="metric-controller">DCAL <i class="fas fa-star"></i></div>
+                    <div class="metric-value">5.007 <span>rad·s²</span></div>
+                    <div class="metric-label">ITAE</div>
+                </div>
+                <div class="pub-metric dcal-best">
+                    <div class="metric-controller">DCAL <i class="fas fa-star"></i></div>
+                    <div class="metric-value">0.0609 <span>Nm</span></div>
+                    <div class="metric-label">RMS Torque</div>
+                </div>
+                <div class="pub-metric baseline">
+                    <div class="metric-controller">vs. PID</div>
+                    <div class="metric-value">42% <span>↓</span></div>
+                    <div class="metric-label">RMSE Reduction</div>
+                </div>
+            </div>
+
+            <!-- Results graphs -->
+            <div class="pub-results-label"><i class="fas fa-chart-line"></i> Experimental Results</div>
+            <div class="pub-graphs">
+                <div class="pub-graph-item">
+                    <img src="assets/images/haptic/image9.png" alt="DCAL Joint Position Tracking — all 3 joints follow desired trajectory with high accuracy" loading="lazy">
+                    <div class="pub-graph-caption">DCAL: Joint Position Tracking (Joints 1–3)</div>
+                </div>
+                <div class="pub-graph-item">
+                    <img src="assets/images/haptic/image11.png" alt="Tracking Error All Joints under harmonic disturbance" loading="lazy">
+                    <div class="pub-graph-caption">Tracking Error — All Joints (2 Hz Disturbance)</div>
+                </div>
+                <div class="pub-graph-item">
+                    <img src="assets/images/haptic/image15.png" alt="Control Torque All Joints — DCAL efficient actuation" loading="lazy">
+                    <div class="pub-graph-caption">Control Torque — All Joints (DCAL)</div>
+                </div>
+            </div>
+
+            <!-- Contribution summary -->
+            <div class="pub-contributions">
+                <div class="pub-contrib-item"><i class="fas fa-check"></i> <strong>4-DOF Adaptive DCAL</strong> — uses smooth desired trajectory in regressor, avoiding noisy acceleration measurements</div>
+                <div class="pub-contrib-item"><i class="fas fa-check"></i> <strong>10 grouped parameters</strong> estimated online from zero initial conditions — no prior knowledge required</div>
+                <div class="pub-contrib-item"><i class="fas fa-check"></i> <strong>Lyapunov stability</strong> — bounded tracking error proven under bounded 2 Hz harmonic disturbance</div>
+            </div>
+
+            <div class="project-tags" style="margin-top:1.2rem;">
+                <span>DCAL</span><span>Adaptive Control</span><span>Parameter Identification</span>
+                <span>Haptic Transparency</span><span>MATLAB/Simulink</span><span>3-DOF Manipulator</span>
+            </div>
+
             <div class="project-footer">
-                <a href="https://github.com/As0966" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                <a href="https://github.com/As0966/ADAPTIVE-PARAMETER-IDENTIFICATION-AND-ROBUST-PATH-TRACKING-IN-A-3-DOF-HAPTIC-MANIPULATOR" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                <a href="https://orcid.org/0009-0009-0510-0944" target="_blank" style="margin-left:1rem;"><i class="fab fa-orcid"></i> ORCID</a>
             </div>
         </div>
         <div class="project-card reveal">
