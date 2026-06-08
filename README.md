@@ -37,7 +37,7 @@ Previously worked as a Telecoms Infrastructure Engineer at **Huawei Technologies
 ## 📫 Contact
 
 - 📧 Email: [bayisaligaba965@gmail.com](mailto:bayisaligaba965@gmail.com)
-- 🔗 LinkedIn: [bayisa-ligaba-freelancer](https://www.linkedin.com/in/bayisa-ligaba-freelancer)
+- 🔗 LinkedIn: [bayisa-ligaba-freelancer](https://www.linkedin.com/in/bayisa-ligaba)
 - 🆔 ORCID: [0009-0009-0510-0944](https://orcid.org/0009-0009-0510-0944)
 - 💻 GitHub: [As0966](https://github.com/As0966)
 
