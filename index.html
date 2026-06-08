@@ -280,17 +280,119 @@
                 <a href="https://orcid.org/0009-0009-0510-0944" target="_blank" style="margin-left:1rem;"><i class="fab fa-orcid"></i> ORCID</a>
             </div>
         </div>
-        <div class="project-card reveal">
+
+        <!-- BLUEROV2 PROJECT CARD — Full showcase -->
+        <div class="project-card project-card--publication reveal">
             <div class="project-header">
-                <span class="project-type completed"><i class="fas fa-check-circle"></i> Completed</span>
-                <h3>Mathematical Modeling & Controller Design for a BlueROV2-Inspired 4-DOF Underwater Vehicle</h3>
+                <span class="project-type completed"><i class="fas fa-check-circle"></i> Completed · TÜBİTAK 1002-A</span>
+                <h3>Mathematical Modeling &amp; Controller Design for a BlueROV2-Inspired 4-DOF Underwater Vehicle</h3>
+                <p class="pub-subtitle">7 Nonlinear Controllers Benchmarked in Gazebo Harmonic — Circle, Figure-8 &amp; 3D Spline Trajectories</p>
             </div>
-            <div class="project-body">
-                <p>Comprehensive mathematical models and advanced controllers for a BlueROV2-inspired 4-DOF underwater vehicle, including stability analysis and simulation.</p>
-                <div class="project-tags"><span>Modeling</span><span>BlueROV2</span><span>Controller Design</span><span>Simulink</span></div>
+
+            <!-- Architecture + description -->
+            <div class="pub-hero">
+                <div class="pub-device-img">
+                    <img src="assets/images/bluerov2/architecture.png" alt="HASTEN-AUV System Architecture" loading="lazy">
+                    <div class="pub-img-caption">ROS 2 + Gazebo Harmonic Control Architecture</div>
+                </div>
+                <div class="pub-abstract">
+                    <div class="pub-label"><i class="fas fa-water"></i> Project Overview</div>
+                    <p>A full-stack ROS 2 simulation framework implementing and benchmarking <strong>7 nonlinear control architectures</strong> on a BlueROV2-inspired 4-DOF AUV. Dynamics modeled using <strong>Fossen's formulation</strong> with real BlueROV2 hydrodynamic parameters. Validated across three trajectory types: circular, figure-8 (lemniscate), and 3D spline — with ocean current disturbance injection.</p>
+                    <div class="pub-meta-row">
+                        <span><i class="fas fa-users"></i> B. L. Janka, K. ÇETİN</span>
+                        <span><i class="fas fa-university"></i> İzmir Katip Çelebi University</span>
+                        <span><i class="fas fa-flask"></i> TÜBİTAK 1002-A</span>
+                    </div>
+                    <div class="pub-table-wrap">
+                        <table class="pub-table">
+                            <thead><tr><th>Controller</th><th>RMSE (m)</th><th>ITAE</th><th>Type</th></tr></thead>
+                            <tbody>
+                                <tr class="best-row"><td>🥇 Backstepping</td><td>0.0364</td><td>40.57</td><td>Nonlinear</td></tr>
+                                <tr class="best-row"><td>🥈 FL I/O</td><td>0.0278</td><td>10.76</td><td>Nonlinear</td></tr>
+                                <tr><td>Adaptive INN</td><td>0.0393</td><td>41.31</td><td>Neural</td></tr>
+                                <tr><td>Adapt. Backstepping</td><td>0.0681</td><td>77.02</td><td>Adaptive</td></tr>
+                                <tr><td>MRAC</td><td>0.1317</td><td>120.6</td><td>Adaptive</td></tr>
+                                <tr><td>State Observer</td><td>0.1934</td><td>299.4</td><td>Linear</td></tr>
+                                <tr><td>State Feedback</td><td>0.2305</td><td>381.2</td><td>Linear</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
+
+            <!-- Key metrics -->
+            <div class="pub-metrics">
+                <div class="pub-metric dcal-best">
+                    <div class="metric-controller">Best RMSE <i class="fas fa-star"></i></div>
+                    <div class="metric-value">0.0278 <span>m</span></div>
+                    <div class="metric-label">FL I/O Controller</div>
+                </div>
+                <div class="pub-metric dcal-best">
+                    <div class="metric-controller">Best ITAE <i class="fas fa-star"></i></div>
+                    <div class="metric-value">10.76 <span>m·s²</span></div>
+                    <div class="metric-label">FL I/O Controller</div>
+                </div>
+                <div class="pub-metric dcal-best">
+                    <div class="metric-controller">Controllers</div>
+                    <div class="metric-value">7 <span>tested</span></div>
+                    <div class="metric-label">Architectures</div>
+                </div>
+                <div class="pub-metric baseline">
+                    <div class="metric-controller">Trajectories</div>
+                    <div class="metric-value">3 <span>types</span></div>
+                    <div class="metric-label">Circle · ∞ · Spline</div>
+                </div>
+            </div>
+
+            <!-- Simulation videos -->
+            <div class="pub-results-label"><i class="fas fa-play-circle"></i> Gazebo Simulation Videos</div>
+            <div class="pub-videos">
+                <div class="pub-video-item">
+                    <video controls muted loop preload="none" poster="assets/images/bluerov2/backstepping_circle_gazebo.png">
+                        <source src="assets/videos/bluerov2/state_feedback_circle.webm" type="video/webm">
+                    </video>
+                    <div class="pub-graph-caption">State Feedback — Circular Trajectory</div>
+                </div>
+                <div class="pub-video-item">
+                    <video controls muted loop preload="none" poster="assets/images/bluerov2/hasten_adaptive_backstepping_figure8_gazebo.png">
+                        <source src="assets/videos/bluerov2/adaptive_backstepping_infinity.webm" type="video/webm">
+                    </video>
+                    <div class="pub-graph-caption">Adaptive Backstepping — Infinity (∞) Trajectory</div>
+                </div>
+                <div class="pub-video-item">
+                    <video controls muted loop preload="none" poster="assets/images/bluerov2/hasten_inn_spline_gazebo.png">
+                        <source src="assets/videos/bluerov2/mrac_spline.webm" type="video/webm">
+                    </video>
+                    <div class="pub-graph-caption">MRAC — 3D Spline Trajectory</div>
+                </div>
+            </div>
+
+            <!-- Result figures -->
+            <div class="pub-results-label"><i class="fas fa-chart-line"></i> Trajectory Tracking Results</div>
+            <div class="pub-graphs">
+                <div class="pub-graph-item">
+                    <img src="assets/images/bluerov2/backstepping_circle_gazebo.png" alt="Backstepping — Circular trajectory with depth and control effort" loading="lazy">
+                    <div class="pub-graph-caption">Backstepping — Circle (RMSE: 0.0489 m)</div>
+                </div>
+                <div class="pub-graph-item">
+                    <img src="assets/images/bluerov2/hasten_adaptive_backstepping_figure8_gazebo.png" alt="Adaptive Backstepping — Figure-8 trajectory" loading="lazy">
+                    <div class="pub-graph-caption">Adaptive Backstepping — Figure-8</div>
+                </div>
+                <div class="pub-graph-item">
+                    <img src="assets/images/bluerov2/hasten_fl_io_circle_gazebo.png" alt="FL I/O — Circular trajectory — best precision" loading="lazy">
+                    <div class="pub-graph-caption">FL I/O — Circle (lowest ITAE: 16.1)</div>
+                </div>
+            </div>
+
+            <div class="project-tags" style="margin-top:1rem;">
+                <span>ROS 2 Humble</span><span>Gazebo Harmonic</span><span>Backstepping</span>
+                <span>MRAC</span><span>Neural Networks</span><span>Fossen Dynamics</span>
+                <span>BlueROV2</span><span>Python</span><span>TÜBİTAK</span>
+            </div>
+
             <div class="project-footer">
-                <a href="https://github.com/As0966" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                <a href="https://github.com/As0966/bluerov2_control_project" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                <a href="https://github.com/As0966/bluerov2_control_project/tree/main/Simulation_Videos" target="_blank" style="margin-left:1rem;"><i class="fas fa-film"></i> All Simulation Videos</a>
             </div>
         </div>
     </div>

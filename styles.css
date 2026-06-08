@@ -191,6 +191,22 @@ section{padding:5rem 2rem;max-width:1200px;margin:0 auto}
 .pub-contrib-item{font-size:.82rem;color:var(--text-m);display:flex;align-items:baseline;gap:.6rem;line-height:1.6}
 .pub-contrib-item i{color:var(--emerald);font-size:.7rem;flex-shrink:0;margin-top:.2rem}
 
+/* Simulation videos grid */
+.pub-videos{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;padding:0 1.5rem 1.25rem}
+.pub-video-item{border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--dark-2)}
+.pub-video-item video{width:100%;display:block;max-height:200px;object-fit:cover}
+.pub-video-item:hover video{opacity:.9}
+
+/* Inline metrics table */
+.pub-table-wrap{margin-top:.75rem;border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.pub-table{width:100%;border-collapse:collapse;font-size:.72rem}
+.pub-table thead{background:rgba(96,165,250,.08)}
+.pub-table th{padding:.45rem .6rem;text-align:left;color:var(--p);font-weight:700;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border)}
+.pub-table td{padding:.4rem .6rem;color:var(--text-m);border-bottom:1px solid rgba(255,255,255,.03)}
+.pub-table tbody tr:last-child td{border-bottom:none}
+.pub-table .best-row td{color:var(--emerald);font-weight:600}
+.pub-table tbody tr:hover{background:rgba(96,165,250,.03)}
+
 /* EDUCATION */
 .edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
 .edu-card{background:var(--dark-3);padding:1.75rem;border-radius:14px;border:1px solid var(--border);transition:all .4s;position:relative;overflow:hidden}
