@@ -177,16 +177,6 @@
         <div class="section-line"></div>
     </div>
     <div class="projects-grid">
-        <div class="project-card reveal">
-            <div class="project-header">
-                <span class="project-type ongoing"><i class="fas fa-flask"></i> Ongoing</span>
-                <h3>Sonar-Assisted Semi-Autonomous Adaptive Backstepping Control with Haptic Teleoperation for AUVs</h3>
-            </div>
-            <div class="project-body">
-                <p>Novel control architecture integrating sonar-assisted navigation with semi-autonomous adaptive backstepping control and haptic teleoperation for autonomous underwater vehicles.</p>
-                <div class="project-tags"><span>Adaptive Backstepping</span><span>Haptic Teleoperation</span><span>Sonar</span><span>ROS</span></div>
-            </div>
-        </div>
         <!-- HASTEN-AUV STAGE 1 & HARDWARE TESTING SHOWCASE CARD -->
         <div class="project-card project-card--publication reveal" id="hasten-auv">
             <div class="project-header">
@@ -194,33 +184,34 @@
                     <span class="project-type completed"><i class="fas fa-check-circle"></i> Stage 1 Complete (Simulation & Benchmark)</span>
                     <span class="project-type ongoing" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);"><i class="fas fa-vial"></i> Stage 2 Ongoing (Physical Hardware & Pool Testing)</span>
                 </div>
-                <h3>Haptic-Sonar Guided Adaptive Fault-Tolerant Nonlinear Control for AUVs (HASTEN-AUV)</h3>
+                <h3>HASTEN-AUV (Stage 1): Haptic-Sonar Guided Adaptive Fault-Tolerant Nonlinear Control for AUVs</h3>
                 <p class="pub-subtitle">Lyapunov-Based Adaptive Backstepping, Neural Dynamic Compensation, Static BLF & 11-Case Thesis Benchmark</p>
             </div>
 
-            <!-- Hero: 11-in-1 Plot + Project Abstract -->
+            <!-- Hero: 11-in-1 Plot + Detailed Project Abstract -->
             <div class="pub-hero">
                 <div class="pub-device-img">
                     <img src="assets/images/hasten_stage1_11case_benchmark.png" alt="11-in-1 Master Thesis Benchmark Plots for HASTEN-AUV" loading="lazy">
                     <div class="pub-img-caption">11-in-1 Master Thesis Benchmark: Lemniscate Path, Lyapunov Weights & Error Profiles</div>
                 </div>
                 <div class="pub-abstract">
-                    <div class="pub-label"><i class="fas fa-shield-alt"></i> Architecture & Executive Overview</div>
-                    <p>HASTEN-AUV introduces a unified <strong>Neural Network Adaptive Backstepping (NN-ABS)</strong> framework with <strong>Barrier Lyapunov Functions (BLF)</strong> and real-time <strong>Watchdog Failure Diagnostics</strong> for underwater vehicles facing severe thruster degradation and ocean current turbulence. The framework maintains bounded 3D trajectory tracking and guarantees state-constraint satisfaction even under complete single and dual-actuator breakdown.</p>
+                    <div class="pub-label"><i class="fas fa-shield-alt"></i> Comprehensive Project Architecture & Technical Description</div>
+                    <p><strong>HASTEN-AUV</strong> (Stage 1) establishes a multi-layered, fault-tolerant nonlinear control architecture engineered specifically for Autonomous Underwater Vehicles (AUVs) navigating hazardous aquatic environments under severe thruster degradation and fluid disturbances. The core framework seamlessly couples <strong>Lyapunov-based Adaptive Backstepping Control (ABS)</strong> with <strong>Radial Basis Function Neural Networks (RBFNN)</strong> to online-identify unmodeled hydrodynamic damping, current perturbations, and thruster efficiency losses without requiring explicit dynamic models.</p>
+                    <p style="margin-top: 0.5rem;">To strictly enforce operational safety boundaries during subterranean pipe inspection, <strong>Static & Dynamic Barrier Lyapunov Functions (BLF)</strong> guarantee asymptotic tracking error convergence within strict error funnels. In addition, real-time <strong>Watchdog Failure Diagnostics</strong> dynamically detect single and multi-thruster breakdowns, immediately reconfiguring the control allocation matrix to preserve vehicle control authority and prevent catastrophic drift.</p>
                     
                     <div class="hardware-alert-box" style="margin: 0.8rem 0; padding: 0.75rem 1rem; background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(15, 23, 42, 0.7)); border-left: 4px solid #38bdf8; border-radius: 6px;">
                         <h4 style="margin: 0 0 0.3rem 0; color: #38bdf8; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem;">
-                            <i class="fas fa-microchip"></i> Physical Hardware & Pool Testing Status (Active Phase)
+                            <i class="fas fa-microchip"></i> Physical Hardware Integration & Active Pool Testing Phase
                         </h4>
                         <p style="margin: 0; font-size: 0.76rem; color: #cbd5e1; line-height: 1.4;">
-                            Following complete Stage 1 numerical benchmarking in ROS 2 Gazebo Harmonic, the system is actively undergoing physical hardware integration. Real-world validation features a <strong>custom 6-DOF BlueROV2 platform</strong>, <strong>3D Systems Touch Haptic Stylus</strong> for bilateral force feedback teleoperation, <strong>3D Multibeam Sonar</strong> for perimeter surveying, and custom sensor-distribution PCBs undergoing pool testing trials.
+                            Having successfully validated all 11 control scenarios in ROS 2 Gazebo Harmonic, the system is actively undergoing physical deployment. Real-world validation features a <strong>custom 6-DOF BlueROV2 vehicle</strong>, a <strong>3D Systems Touch Haptic Stylus</strong> for active force-feedback teleoperation overrides, a <strong>3D Multibeam Imaging Sonar</strong> for real-time wall-following perimeter extraction, and custom embedded electronics currently undergoing physical pool testing.
                         </p>
                     </div>
 
                     <div class="pub-meta-row">
                         <span><i class="fas fa-users"></i> B. L. Janka, K. ÇETİN</span>
                         <span><i class="fas fa-university"></i> İzmir Katip Çelebi University</span>
-                        <span><i class="fas fa-code-branch"></i> ROS 2 / Hardware Pool Testing</span>
+                        <span><i class="fas fa-code-branch"></i> ROS 2 / Physical Pool Testing</span>
                     </div>
                 </div>
             </div>
