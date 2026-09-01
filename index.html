@@ -241,7 +241,7 @@
             </div>
 
             <!-- All-Aspect Benchmark Comparison Table -->
-            <div class="pub-results-label"><i class="fas fa-table"></i> Stage 1 Master Thesis Benchmark: All-Aspect Scenario Comparison (11 Cases & 16 Metrics)</div>
+            <div class="pub-results-label"><i class="fas fa-table"></i> Stage 1 Master Thesis Benchmark: All-Aspect Scenario Comparison (11 Cases & 19 Metrics)</div>
             <div class="pub-table-wrap" style="max-height: 480px; overflow: auto; border: 1px solid var(--border); border-radius: 8px;">
                 <table class="pub-table" style="white-space: nowrap; font-size: 0.70rem;">
                     <thead>
@@ -252,6 +252,9 @@
                             <th>Danger Time (s)</th>
                             <th>Defects Found</th>
                             <th>Settling Time</th>
+                            <th>Thruster Saturation (%)</th>
+                            <th>Control Jerk (N/s²)</th>
+                            <th>Energy Draw (kJ)</th>
                             <th>RMSE 3D (m)</th>
                             <th>RMSE X (m)</th>
                             <th>RMSE Y (m)</th>
@@ -265,17 +268,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 1: ABS Nominal</td><td>402.2</td><td>8.35</td><td>0</td><td>34</td><td>22.8 s</td><td>0.789</td><td>0.595</td><td>0.517</td><td>0.013</td><td>0.096</td><td>53,932.3</td><td>39,625.2</td><td>30,111.5</td><td>913.8</td><td>1,827.8</td></tr>
-                        <tr style="background: rgba(239, 68, 68, 0.08); color: #f87171;"><td style="position: sticky; left: 0; background: #1a1015; font-weight: 600; color: #f87171;">Case 2: ABS Faulted (Uncompensated)</td><td>423.4</td><td>8.16</td><td>0</td><td>40</td><td>32.8 s</td><td>9.663</td><td>7.524</td><td>6.063</td><td>0.028</td><td>1.359</td><td>546,201.6</td><td>371,596.6</td><td>338,930.8</td><td>1,536.3</td><td>76,894.0</td></tr>
-                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 2b: ABS Reconfigured Faulted</td><td>402.2</td><td>8.66</td><td>0</td><td>37</td><td>28.8 s</td><td>0.812</td><td>0.614</td><td>0.531</td><td>0.013</td><td>0.137</td><td>55,746.7</td><td>41,012.0</td><td>31,003.0</td><td>918.2</td><td>1,858.4</td></tr>
-                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 3: NN-ABS Nominal</td><td>403.6</td><td>8.88</td><td>0</td><td>41</td><td>28.0 s</td><td>0.440</td><td>0.333</td><td>0.288</td><td>0.005</td><td>0.074</td><td>30,332.2</td><td>22,534.2</td><td>16,710.4</td><td>110.7</td><td>749.9</td></tr>
-                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4: NN-ABS Faulted</td><td>400.2</td><td>8.70</td><td>0</td><td>42</td><td>28.8 s</td><td>0.587</td><td>0.443</td><td>0.385</td><td>0.006</td><td>0.107</td><td>39,098.1</td><td>29,520.3</td><td>21,569.7</td><td>95.1</td><td>1,198.2</td></tr>
-                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4b: NN-ABS No-Reconfig Faulted</td><td>404.4</td><td>8.51</td><td>0</td><td>39</td><td>34.2 s</td><td>0.612</td><td>0.462</td><td>0.401</td><td>0.007</td><td>0.109</td><td>40,528.0</td><td>30,572.5</td><td>22,492.2</td><td>93.6</td><td>1,288.4</td></tr>
-                        <tr class="best-row"><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">🥇 Case 4c: NN-ABS Dynamic BLF Faulted (Sat & Jerk Bounded)</td><td>401.2</td><td>8.53</td><td>0</td><td>40</td><td>26.2 s</td><td>0.420</td><td>0.318</td><td>0.274</td><td>0.003</td><td>0.075</td><td>28,712.7</td><td>21,451.4</td><td>15,697.5</td><td>58.5</td><td>776.2</td></tr>
-                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4d: NN-ABS Multi-Fault</td><td>406.0</td><td>8.98</td><td>0</td><td>45</td><td>99.4 s</td><td>1.875</td><td>1.506</td><td>1.117</td><td>0.014</td><td>0.633</td><td>126,819.9</td><td>95,085.2</td><td>66,493.0</td><td>605.0</td><td>38,989.5</td></tr>
-                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4e: NN-ABS No-Watchdog Multi-Fault</td><td>405.0</td><td>8.68</td><td>0</td><td>44</td><td>22.8 s</td><td>1.807</td><td>1.459</td><td>1.065</td><td>0.014</td><td>0.624</td><td>122,214.6</td><td>91,532.2</td><td>63,109.5</td><td>646.0</td><td>38,667.2</td></tr>
-                        <tr class="best-row"><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">🥇 Case 4f: NN-ABS Dynamic BLF Multi-Fault (Watchdog & Jerk Bounded)</td><td>406.2</td><td>8.80</td><td>0</td><td>44</td><td>41.2 s</td><td>0.726</td><td>0.556</td><td>0.468</td><td>0.007</td><td>0.434</td><td>49,792.0</td><td>35,171.4</td><td>27,446.1</td><td>376.4</td><td>27,498.3</td></tr>
-                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4g: NN-ABS Dynamic BLF Multi-Fault (No Watchdog)</td><td>406.8</td><td>8.37</td><td>0</td><td>44</td><td>41.4 s</td><td>0.707</td><td>0.525</td><td>0.473</td><td>0.007</td><td>0.432</td><td>48,527.8</td><td>33,790.0</td><td>27,296.0</td><td>379.3</td><td>27,438.2</td></tr>
+                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 1: ABS Nominal</td><td>402.2</td><td>8.35</td><td>0</td><td>34</td><td>22.8 s</td><td>5.32%</td><td>20.40</td><td>10,677</td><td>0.789</td><td>0.595</td><td>0.517</td><td>0.013</td><td>0.096</td><td>53,932.3</td><td>39,625.2</td><td>30,111.5</td><td>913.8</td><td>1,827.8</td></tr>
+                        <tr style="background: rgba(239, 68, 68, 0.08); color: #f87171;"><td style="position: sticky; left: 0; background: #1a1015; font-weight: 600; color: #f87171;">Case 2: ABS Faulted (Uncompensated)</td><td>423.4</td><td>8.16</td><td>0</td><td>40</td><td>32.8 s</td><td>89.80%</td><td>82.58</td><td>31,927</td><td>9.663</td><td>7.524</td><td>6.063</td><td>0.028</td><td>1.359</td><td>546,201.6</td><td>371,596.6</td><td>338,930.8</td><td>1,536.3</td><td>76,894.0</td></tr>
+                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 2b: ABS Reconfigured Faulted</td><td>402.2</td><td>8.66</td><td>0</td><td>37</td><td>28.8 s</td><td>5.07%</td><td>20.85</td><td>8,828</td><td>0.812</td><td>0.614</td><td>0.531</td><td>0.013</td><td>0.137</td><td>55,746.7</td><td>41,012.0</td><td>31,003.0</td><td>918.2</td><td>1,858.4</td></tr>
+                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 3: NN-ABS Nominal (Dynamic BLF)</td><td>403.6</td><td>8.88</td><td>0</td><td>41</td><td>28.0 s</td><td>5.30%</td><td>20.62</td><td>9,621</td><td>0.440</td><td>0.333</td><td>0.288</td><td>0.005</td><td>0.074</td><td>30,332.2</td><td>22,534.2</td><td>16,710.4</td><td>110.7</td><td>749.9</td></tr>
+                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4: NN-ABS Faulted (Dynamic BLF)</td><td>400.2</td><td>8.70</td><td>0</td><td>42</td><td>28.8 s</td><td>4.80%</td><td>22.37</td><td>4,290</td><td>0.587</td><td>0.443</td><td>0.385</td><td>0.006</td><td>0.107</td><td>39,098.1</td><td>29,520.3</td><td>21,569.7</td><td>95.1</td><td>1,198.2</td></tr>
+                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4b: NN-ABS No-Reconfig Faulted (Dynamic BLF)</td><td>404.4</td><td>8.51</td><td>0</td><td>39</td><td>34.2 s</td><td>5.69%</td><td>21.90</td><td>13,554</td><td>0.612</td><td>0.462</td><td>0.401</td><td>0.007</td><td>0.109</td><td>40,528.0</td><td>30,572.5</td><td>22,492.2</td><td>93.6</td><td>1,288.4</td></tr>
+                        <tr class="best-row"><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">🥇 Case 4c: NN-ABS Static BLF Faulted</td><td>401.2</td><td>8.53</td><td>0</td><td>40</td><td>26.2 s</td><td>5.03%</td><td>22.01</td><td>6,677</td><td>0.420</td><td>0.318</td><td>0.274</td><td>0.003</td><td>0.075</td><td>28,712.7</td><td>21,451.4</td><td>15,697.5</td><td>58.5</td><td>776.2</td></tr>
+                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4d: NN-ABS Multi-Fault (Dynamic BLF)</td><td>406.0</td><td>8.98</td><td>0</td><td>45</td><td>99.4 s</td><td>39.11%</td><td>38.03</td><td>9,481</td><td>1.875</td><td>1.506</td><td>1.117</td><td>0.014</td><td>0.633</td><td>126,819.9</td><td>95,085.2</td><td>66,493.0</td><td>605.0</td><td>38,989.5</td></tr>
+                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4e: NN-ABS No-Watchdog Multi-Fault (Dynamic BLF)</td><td>405.0</td><td>8.68</td><td>0</td><td>44</td><td>22.8 s</td><td>33.53%</td><td>38.05</td><td>7,821</td><td>1.807</td><td>1.459</td><td>1.065</td><td>0.014</td><td>0.624</td><td>122,214.6</td><td>91,532.2</td><td>63,109.5</td><td>646.0</td><td>38,667.2</td></tr>
+                        <tr class="best-row"><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">🥇 Case 4f: NN-ABS Static BLF Multi-Fault (Watchdog)</td><td>406.2</td><td>8.80</td><td>0</td><td>44</td><td>41.2 s</td><td>6.20%</td><td>49.23</td><td>11,613</td><td>0.726</td><td>0.556</td><td>0.468</td><td>0.007</td><td>0.434</td><td>49,792.0</td><td>35,171.4</td><td>27,446.1</td><td>376.4</td><td>27,498.3</td></tr>
+                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4g: NN-ABS Static BLF Multi-Fault (No Watchdog)</td><td>406.8</td><td>8.37</td><td>0</td><td>44</td><td>41.4 s</td><td>6.19%</td><td>49.39</td><td>11,581</td><td>0.707</td><td>0.525</td><td>0.473</td><td>0.007</td><td>0.432</td><td>48,527.8</td><td>33,790.0</td><td>27,296.0</td><td>379.3</td><td>27,438.2</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -328,17 +331,17 @@
         <!-- HASTEN-AUV STAGE 2 UPCOMING PROJECT CARD -->
         <div class="project-card reveal" style="border: 1px solid rgba(245, 158, 11, 0.3); background: rgba(15, 23, 42, 0.6);">
             <div class="project-header">
-                <span class="project-type ongoing" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);"><i class="fas fa-vial"></i> Stage 2 Active / Ongoing</span>
-                <h3>HASTEN-AUV (Stage 2): Physical Hardware Integration &amp; Experimental Pool Testing</h3>
-                <p class="pub-subtitle" style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.3rem;">Experimental Field Deployment on Custom 6-DOF BlueROV2 Testbed</p>
+                <span class="project-type ongoing" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);"><i class="fas fa-brain"></i> Stage 2 Upcoming / Ph.D. Roadmap</span>
+                <h3>HASTEN-AUV (Stage 2): Co-Adaptive Barrier Function (CABF) &amp; Perception-Driven Dynamic Safety</h3>
+                <p class="pub-subtitle" style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.3rem;">Next-Generation Dynamic Constraint Scaling &amp; Multi-Modal Perception Integration</p>
             </div>
             <div class="project-body">
                 <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6;">
-                    <strong>Stage 2 Overview:</strong> Transitioning the simulation-validated HASTEN-AUV framework onto a physical heavy-duty <strong>6-DOF BlueROV2 platform</strong> for experimental water-tank validation. This active phase validates the real-world performance of Watchdog thruster fault reconfiguration, low-latency bilateral force feedback using the <strong>3D Systems Touch Haptic Stylus</strong>, 3D Multibeam Imaging Sonar wall-following perimeter extraction, and custom embedded telemetry PCBs under actual hydrodynamic turbulence and physical thruster constraints.
+                    <strong>Stage 2 Research Scope:</strong> Ph.D. framework introducing <strong>Co-Adaptive Barrier Functions (CABF)</strong> for autonomous AUV navigation in subterranean pipes and confined basins. CABF dynamically expands and contracts state safety envelopes based on real-time multi-modal perception feedback (imaging sonar + visual offset). The framework explicitly enforces <strong>dynamic thruster saturation bounds</strong>, <strong>control jerk minimization</strong>, and <strong>energy consumption optimization</strong>—minimizing thruster wear and power draw under severe flow perturbations.
                 </p>
                 <div class="project-tags" style="margin-top: 1rem;">
-                    <span>BlueROV2 Hardware</span><span>Water Tank Testing</span><span>Thruster Fault Reconfiguration</span>
-                    <span>3D Multibeam Sonar</span><span>Haptic Force Feedback</span><span>Embedded PCBs</span>
+                    <span>Co-Adaptive BLF (CABF)</span><span>Thruster Saturation Bounds</span><span>Control Jerk Minimization</span>
+                    <span>Energy Consumption Optimization</span><span>Multi-Modal Perception</span>
                 </div>
             </div>
         </div>
@@ -346,17 +349,17 @@
         <!-- HASTEN-AUV STAGE 3 UPCOMING PROJECT CARD -->
         <div class="project-card reveal" style="border: 1px solid rgba(139, 92, 246, 0.3); background: rgba(15, 23, 42, 0.6);">
             <div class="project-header">
-                <span class="project-type upcoming" style="background: rgba(139, 92, 246, 0.15); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.3);"><i class="fas fa-brain"></i> Stage 3 Upcoming / Ph.D. Roadmap</span>
-                <h3>HASTEN-AUV (Stage 3): Co-Adaptive Barrier Function (CABF) &amp; Perception-Driven Shared Autonomy</h3>
-                <p class="pub-subtitle" style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.3rem;">Next-Generation Multi-Modal Perception &amp; Dynamic Constraint Optimization</p>
+                <span class="project-type upcoming" style="background: rgba(139, 92, 246, 0.15); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.3);"><i class="fas fa-shield-alt"></i> Stage 3 Upcoming / Ph.D. Roadmap</span>
+                <h3>HASTEN-AUV (Stage 3): Haptic Interaction Fingerprinting &amp; Certification-Ready Field Autonomy</h3>
+                <p class="pub-subtitle" style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.3rem;">Bilateral Force Feedback Stiffness Adaptation &amp; Industrial DNV/ABS Pilot Certification</p>
             </div>
             <div class="project-body">
                 <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6;">
-                    <strong>Stage 3 Overview:</strong> A advanced Ph.D. research direction introducing <strong>Co-Adaptive Barrier Functions (CABF)</strong> for autonomous underwater inspection in confined subterranean environments. CABF dynamically expands and contracts state safety envelopes based on real-time multi-modal perception feedback (imaging sonar + visual offset). The framework explicitly optimizes <strong>dynamic thruster saturation limits</strong>, <strong>control jerk minimization</strong>, and <strong>energy consumption efficiency</strong> while adjusting bilateral haptic stiffness for seamless human-robot shared autonomy.
+                    <strong>Stage 3 Research Scope:</strong> Advanced Ph.D. roadmap introducing <strong>Haptic Interaction Fingerprinting</strong> for bilateral force-feedback teleoperation using the 3D Systems Touch Stylus. Dynamically adjusts haptic stiffness during human-in-the-loop overrides in complex underwater cave topologies. Integrates industrial safety logging, fault-tolerant pilot takeover protocols, and autonomous pilot certification standards (DNV/ABS) for real-world offshore field deployment.
                 </p>
                 <div class="project-tags" style="margin-top: 1rem;">
-                    <span>Co-Adaptive BLF (CABF)</span><span>Thruster Saturation Bounds</span><span>Control Jerk Minimization</span>
-                    <span>Energy Optimization</span><span>Multi-Modal Perception</span><span>Shared Autonomy</span>
+                    <span>Haptic Fingerprinting</span><span>Stiffness Adaptation</span><span>Shared Autonomy Bridge</span>
+                    <span>DNV/ABS Certification</span><span>Offshore Field Deployment</span>
                 </div>
             </div>
         </div>
