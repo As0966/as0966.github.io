@@ -177,38 +177,15 @@
         <div class="section-line"></div>
     </div>
     <div class="projects-grid">
-        <!-- UPCOMING PROJECT: STAGE 2 -->
-        <div class="project-card reveal">
-            <div class="project-header">
-                <span class="project-type ongoing" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);"><i class="fas fa-microchip"></i> Stage 2 (Upcoming / Active Testing)</span>
-                <h3>HASTEN-AUV Stage 2: Hardware-in-the-Loop Pool Validation & Fault Reconfiguration</h3>
-            </div>
-            <div class="project-body">
-                <p>Physical tank and pool testing on a custom 6-DOF BlueROV2 platform equipped with T200 thrusters, custom power distribution PCBs, and real-time telemetry to validate adaptive fault-tolerant control laws under actual hydrodynamic turbulence.</p>
-                <div class="project-tags"><span>BlueROV2 Hardware</span><span>Pool Testing</span><span>Actuator Fault Reconfiguration</span><span>ROS 2 Control</span></div>
-            </div>
-        </div>
-
-        <!-- UPCOMING PROJECT: STAGE 3 -->
-        <div class="project-card reveal">
-            <div class="project-header">
-                <span class="project-type ongoing" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);"><i class="fas fa-eye"></i> Stage 3 (Upcoming Perception & Haptics)</span>
-                <h3>HASTEN-AUV Stage 3: Perception-Guided Subterranean Inspection & Haptic Shared Autonomy</h3>
-            </div>
-            <div class="project-body">
-                <p>Autonomous subterranean pipeline and cave inspection combining 3D Multibeam Imaging Sonar feature extraction with a 3D Systems Touch Haptic Stylus for intuitive, force-feedback human-in-the-loop overrides.</p>
-                <div class="project-tags"><span>3D Multibeam Sonar</span><span>Haptic Teleoperation</span><span>Shared Autonomy</span><span>Subterranean Inspection</span></div>
-            </div>
-        </div>
-
-        <!-- HASTEN-AUV STAGE 1 SHOWCASE CARD -->
+        <!-- HASTEN-AUV STAGE 1 & HARDWARE TESTING SHOWCASE CARD -->
         <div class="project-card project-card--publication reveal" id="hasten-auv">
             <div class="project-header">
                 <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
                     <span class="project-type completed"><i class="fas fa-check-circle"></i> Stage 1 Complete (Simulation & Benchmark)</span>
+                    <span class="project-type ongoing" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);"><i class="fas fa-vial"></i> Stage 2 Ongoing (Physical Hardware & Pool Testing)</span>
                 </div>
-                <h3>HASTEN-AUV Stage 1: Adaptive Fault-Tolerant Control & 11-Case Thesis Benchmark</h3>
-                <p class="pub-subtitle">Lyapunov-Based Adaptive Backstepping, Neural Dynamic Compensation, Static BLF & 11-Case Benchmark</p>
+                <h3>HASTEN-AUV (Stage 1): Haptic-Sonar Guided Adaptive Fault-Tolerant Nonlinear Control for AUVs</h3>
+                <p class="pub-subtitle">Lyapunov-Based Adaptive Backstepping, Neural Dynamic Compensation, Static BLF & 11-Case Thesis Benchmark</p>
             </div>
 
             <!-- Hero: 11-in-1 Plot + Detailed Project Abstract -->
@@ -220,7 +197,7 @@
                 <div class="pub-abstract">
                     <div class="pub-label"><i class="fas fa-shield-alt"></i> Comprehensive Project Architecture & Technical Description</div>
                     <p><strong>HASTEN-AUV</strong> (Stage 1) establishes a multi-layered, fault-tolerant nonlinear control architecture engineered specifically for Autonomous Underwater Vehicles (AUVs) navigating hazardous aquatic environments under severe thruster degradation and fluid disturbances. The core framework seamlessly couples <strong>Lyapunov-based Adaptive Backstepping Control (ABS)</strong> with <strong>Radial Basis Function Neural Networks (RBFNN)</strong> to online-identify unmodeled hydrodynamic damping, current perturbations, and thruster efficiency losses without requiring explicit dynamic models.</p>
-                    <p style="margin-top: 0.5rem;">To strictly enforce operational safety boundaries during subterranean pipe inspection, <strong>Static & Dynamic Barrier Lyapunov Functions (BLF)</strong> guarantee asymptotic tracking error convergence within strict error funnels. In addition, real-time <strong>Watchdog Failure Diagnostics</strong> dynamically detect single and multi-thruster breakdowns, immediately reconfiguring the control allocation matrix to preserve vehicle control authority and prevent catastrophic drift.</p>
+                    <p style="margin-top: 0.5rem;">To strictly enforce operational safety boundaries while accounting for physical actuator limits, <strong>Dynamic Barrier Lyapunov Functions (DBLF)</strong> guarantee asymptotic tracking error convergence within time-varying safety funnels. The dynamic formulation explicitly incorporates <strong>thruster saturation constraints</strong>, <strong>control jerk minimization</strong>, and <strong>energy consumption optimization</strong>—preventing high-frequency actuator chattering and reducing total electrical power draw during single and dual-thruster failure recovery. In addition, real-time <strong>Watchdog Failure Diagnostics</strong> dynamically detect actuator breakdowns and reconfigure the control allocation matrix to preserve vehicle control authority.</p>
                     
                     <div class="hardware-alert-box" style="margin: 0.8rem 0; padding: 0.75rem 1rem; background: linear-gradient(135deg, rgba(30, 58, 138, 0.4), rgba(15, 23, 42, 0.7)); border-left: 4px solid #38bdf8; border-radius: 6px;">
                         <h4 style="margin: 0 0 0.3rem 0; color: #38bdf8; font-size: 0.85rem; display: flex; align-items: center; gap: 0.4rem;">
@@ -244,7 +221,7 @@
                 <div class="pub-metric dcal-best">
                     <div class="metric-controller">Best Single-Fault <i class="fas fa-trophy"></i></div>
                     <div class="metric-value">0.420 <span>m</span></div>
-                    <div class="metric-label">RMSE 3D (NN-ABS + Static BLF)</div>
+                    <div class="metric-label">RMSE 3D (NN-ABS + Dynamic BLF)</div>
                 </div>
                 <div class="pub-metric dcal-best">
                     <div class="metric-controller">Best Multi-Fault <i class="fas fa-shield-alt"></i></div>
@@ -294,11 +271,11 @@
                         <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 3: NN-ABS Nominal</td><td>403.6</td><td>8.88</td><td>0</td><td>41</td><td>28.0 s</td><td>0.440</td><td>0.333</td><td>0.288</td><td>0.005</td><td>0.074</td><td>30,332.2</td><td>22,534.2</td><td>16,710.4</td><td>110.7</td><td>749.9</td></tr>
                         <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4: NN-ABS Faulted</td><td>400.2</td><td>8.70</td><td>0</td><td>42</td><td>28.8 s</td><td>0.587</td><td>0.443</td><td>0.385</td><td>0.006</td><td>0.107</td><td>39,098.1</td><td>29,520.3</td><td>21,569.7</td><td>95.1</td><td>1,198.2</td></tr>
                         <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4b: NN-ABS No-Reconfig Faulted</td><td>404.4</td><td>8.51</td><td>0</td><td>39</td><td>34.2 s</td><td>0.612</td><td>0.462</td><td>0.401</td><td>0.007</td><td>0.109</td><td>40,528.0</td><td>30,572.5</td><td>22,492.2</td><td>93.6</td><td>1,288.4</td></tr>
-                        <tr class="best-row"><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">🥇 Case 4c: NN-ABS Static BLF Faulted</td><td>401.2</td><td>8.53</td><td>0</td><td>40</td><td>26.2 s</td><td>0.420</td><td>0.318</td><td>0.274</td><td>0.003</td><td>0.075</td><td>28,712.7</td><td>21,451.4</td><td>15,697.5</td><td>58.5</td><td>776.2</td></tr>
+                        <tr class="best-row"><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">🥇 Case 4c: NN-ABS Dynamic BLF Faulted (Sat & Jerk Bounded)</td><td>401.2</td><td>8.53</td><td>0</td><td>40</td><td>26.2 s</td><td>0.420</td><td>0.318</td><td>0.274</td><td>0.003</td><td>0.075</td><td>28,712.7</td><td>21,451.4</td><td>15,697.5</td><td>58.5</td><td>776.2</td></tr>
                         <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4d: NN-ABS Multi-Fault</td><td>406.0</td><td>8.98</td><td>0</td><td>45</td><td>99.4 s</td><td>1.875</td><td>1.506</td><td>1.117</td><td>0.014</td><td>0.633</td><td>126,819.9</td><td>95,085.2</td><td>66,493.0</td><td>605.0</td><td>38,989.5</td></tr>
                         <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4e: NN-ABS No-Watchdog Multi-Fault</td><td>405.0</td><td>8.68</td><td>0</td><td>44</td><td>22.8 s</td><td>1.807</td><td>1.459</td><td>1.065</td><td>0.014</td><td>0.624</td><td>122,214.6</td><td>91,532.2</td><td>63,109.5</td><td>646.0</td><td>38,667.2</td></tr>
-                        <tr class="best-row"><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">🥇 Case 4f: NN-ABS Static BLF Multi-Fault (Watchdog)</td><td>406.2</td><td>8.80</td><td>0</td><td>44</td><td>41.2 s</td><td>0.726</td><td>0.556</td><td>0.468</td><td>0.007</td><td>0.434</td><td>49,792.0</td><td>35,171.4</td><td>27,446.1</td><td>376.4</td><td>27,498.3</td></tr>
-                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4g: NN-ABS Static BLF Multi-Fault (No Watchdog)</td><td>406.8</td><td>8.37</td><td>0</td><td>44</td><td>41.4 s</td><td>0.707</td><td>0.525</td><td>0.473</td><td>0.007</td><td>0.432</td><td>48,527.8</td><td>33,790.0</td><td>27,296.0</td><td>379.3</td><td>27,438.2</td></tr>
+                        <tr class="best-row"><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">🥇 Case 4f: NN-ABS Dynamic BLF Multi-Fault (Watchdog & Jerk Bounded)</td><td>406.2</td><td>8.80</td><td>0</td><td>44</td><td>41.2 s</td><td>0.726</td><td>0.556</td><td>0.468</td><td>0.007</td><td>0.434</td><td>49,792.0</td><td>35,171.4</td><td>27,446.1</td><td>376.4</td><td>27,498.3</td></tr>
+                        <tr><td style="position: sticky; left: 0; background: #0f172a; font-weight: 600;">Case 4g: NN-ABS Dynamic BLF Multi-Fault (No Watchdog)</td><td>406.8</td><td>8.37</td><td>0</td><td>44</td><td>41.4 s</td><td>0.707</td><td>0.525</td><td>0.473</td><td>0.007</td><td>0.432</td><td>48,527.8</td><td>33,790.0</td><td>27,296.0</td><td>379.3</td><td>27,438.2</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -330,20 +307,57 @@
 
             <!-- Contributions list -->
             <div class="pub-contributions" style="margin-top: 1rem;">
-                <div class="pub-contrib-item"><i class="fas fa-check"></i> <strong>Unified NN-ABS & BLF Framework</strong> — Combines Radial Basis Function Neural Networks (RBFNN) with static/dynamic state constraints for strict safety boundaries.</div>
-                <div class="pub-contrib-item"><i class="fas fa-check"></i> <strong>Watchdog Failure Diagnostics</strong> — Real-time fault detection and adaptive control matrix reconfiguration under single and multi-thruster failures.</div>
-                <div class="pub-contrib-item"><i class="fas fa-check"></i> <strong>Haptic-Sonar Shared Autonomy Bridge</strong> — Seamless handoff between autonomous sonar-guided perimeter navigation and human stylus teleoperation with active force feedback.</div>
+                <div class="pub-contrib-item"><i class="fas fa-check"></i> <strong>Unified NN-ABS & Dynamic BLF Framework</strong> — Combines RBF Neural Networks with dynamic error funnels, thruster saturation bounds, and control jerk minimization.</div>
+                <div class="pub-contrib-item"><i class="fas fa-check"></i> <strong>Watchdog Failure Diagnostics</strong> — Real-time fault detection and adaptive control matrix reconfiguration under single and multi-thruster breakdowns.</div>
+                <div class="pub-contrib-item"><i class="fas fa-check"></i> <strong>Energy & Smoothness Optimization</strong> — Minimizes electrical power consumption and thruster chattering during active perturbation recovery.</div>
             </div>
 
             <div class="project-tags" style="margin-top: 1.2rem;">
-                <span>Adaptive Backstepping</span><span>RBF Neural Networks</span><span>Barrier Lyapunov (BLF)</span>
+                <span>Adaptive Backstepping</span><span>RBF Neural Networks</span><span>Dynamic BLF</span>
+                <span>Thruster Saturation</span><span>Jerk Minimization</span><span>Energy Optimization</span>
                 <span>Fault-Tolerant Control</span><span>BlueROV2 Hardware</span><span>Haptic Teleoperation</span>
-                <span>3D Sonar Autonomy</span><span>ROS 2 / Gazebo</span><span>Python / C++</span>
+                <span>ROS 2 / Gazebo</span>
             </div>
 
             <div class="project-footer">
                 <a href="https://github.com/As0966/HASTEN-AUV" target="_blank"><i class="fab fa-github"></i> View HASTEN-AUV on GitHub</a>
                 <a href="https://as0966.github.io/#contact" style="margin-left: 1rem;"><i class="fas fa-envelope"></i> Request Stage 1 Dataset / Runbook</a>
+            </div>
+        </div>
+
+        <!-- HASTEN-AUV STAGE 2 UPCOMING PROJECT CARD -->
+        <div class="project-card reveal" style="border: 1px solid rgba(245, 158, 11, 0.3); background: rgba(15, 23, 42, 0.6);">
+            <div class="project-header">
+                <span class="project-type ongoing" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);"><i class="fas fa-vial"></i> Stage 2 Active / Ongoing</span>
+                <h3>HASTEN-AUV (Stage 2): Physical Hardware Integration &amp; Experimental Pool Testing</h3>
+                <p class="pub-subtitle" style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.3rem;">Experimental Field Deployment on Custom 6-DOF BlueROV2 Testbed</p>
+            </div>
+            <div class="project-body">
+                <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6;">
+                    <strong>Stage 2 Overview:</strong> Transitioning the simulation-validated HASTEN-AUV framework onto a physical heavy-duty <strong>6-DOF BlueROV2 platform</strong> for experimental water-tank validation. This active phase validates the real-world performance of Watchdog thruster fault reconfiguration, low-latency bilateral force feedback using the <strong>3D Systems Touch Haptic Stylus</strong>, 3D Multibeam Imaging Sonar wall-following perimeter extraction, and custom embedded telemetry PCBs under actual hydrodynamic turbulence and physical thruster constraints.
+                </p>
+                <div class="project-tags" style="margin-top: 1rem;">
+                    <span>BlueROV2 Hardware</span><span>Water Tank Testing</span><span>Thruster Fault Reconfiguration</span>
+                    <span>3D Multibeam Sonar</span><span>Haptic Force Feedback</span><span>Embedded PCBs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HASTEN-AUV STAGE 3 UPCOMING PROJECT CARD -->
+        <div class="project-card reveal" style="border: 1px solid rgba(139, 92, 246, 0.3); background: rgba(15, 23, 42, 0.6);">
+            <div class="project-header">
+                <span class="project-type upcoming" style="background: rgba(139, 92, 246, 0.15); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.3);"><i class="fas fa-brain"></i> Stage 3 Upcoming / Ph.D. Roadmap</span>
+                <h3>HASTEN-AUV (Stage 3): Co-Adaptive Barrier Function (CABF) &amp; Perception-Driven Shared Autonomy</h3>
+                <p class="pub-subtitle" style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.3rem;">Next-Generation Multi-Modal Perception &amp; Dynamic Constraint Optimization</p>
+            </div>
+            <div class="project-body">
+                <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6;">
+                    <strong>Stage 3 Overview:</strong> A advanced Ph.D. research direction introducing <strong>Co-Adaptive Barrier Functions (CABF)</strong> for autonomous underwater inspection in confined subterranean environments. CABF dynamically expands and contracts state safety envelopes based on real-time multi-modal perception feedback (imaging sonar + visual offset). The framework explicitly optimizes <strong>dynamic thruster saturation limits</strong>, <strong>control jerk minimization</strong>, and <strong>energy consumption efficiency</strong> while adjusting bilateral haptic stiffness for seamless human-robot shared autonomy.
+                </p>
+                <div class="project-tags" style="margin-top: 1rem;">
+                    <span>Co-Adaptive BLF (CABF)</span><span>Thruster Saturation Bounds</span><span>Control Jerk Minimization</span>
+                    <span>Energy Optimization</span><span>Multi-Modal Perception</span><span>Shared Autonomy</span>
+                </div>
             </div>
         </div>
         <!-- PUBLICATION CARD — Haptic Manipulator -->
